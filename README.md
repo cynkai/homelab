@@ -34,6 +34,11 @@ Build a personal Home Security Operations Center for cloud security,
 system security, observability, eBPF, Sysmon, Falco, Suricata, Wazuh,
 and AWS monitoring.
 
+## Next step
+
+Once this lab server is up, work continues in
+[todo-cli](https://github.com/cynkai/todo-cli), which builds on top of it.
+
 ## Windows Host Components
 
 ### Windows Exporter

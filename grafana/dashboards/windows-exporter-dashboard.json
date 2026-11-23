@@ -2,20 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v2",
   "kind": "Dashboard",
   "metadata": {
-    "name": "IV0hu1m7z",
-    "namespace": "default",
-    "uid": "898e01a4-260e-4836-8f51-16a8eecc58a3",
-    "resourceVersion": "1785044551691986",
-    "generation": 1,
-    "creationTimestamp": "2026-07-26T05:42:31Z",
-    "labels": {
-      "grafana.app/deprecatedInternalID": "590786294657024"
-    },
-    "annotations": {
-      "grafana.app/createdBy": "user:dft8sgm1qch6oe",
-      "grafana.app/folder": "",
-      "grafana.app/saved-from-ui": "Grafana v13.1.1 (a9cee6e172)"
-    }
+    "name": "homelab-windows-exporter"
   },
   "spec": {
     "annotations": [
@@ -70,7 +57,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -111,7 +98,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -245,7 +232,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -286,7 +273,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -415,7 +402,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -525,7 +512,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -629,7 +616,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "(sum(irate(windows_net_bytes_total{instance=\"$server\"}[1m])) > 1)* 8",
@@ -650,7 +637,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "  sum(irate(windows_net_bytes_total{instance=~\"$server\",nic=\"Red_Hat_VirtIO_Ethernet_Adapter\"}[5m])) / sum(windows_net_current_bandwidth{instance=~\"$server\",nic=\"Red_Hat_VirtIO_Ethernet_Adapter\"}/8) * 100",
@@ -749,7 +736,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -850,7 +837,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "(windows_cs_physical_memory_bytes{instance=~\"$server\"} - windows_os_physical_memory_free_bytes{instance=~\"$server\"}) / windows_cs_physical_memory_bytes{instance=~\"$server\"} * 100",
@@ -948,7 +935,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "windows_os_processes{instance=\"$server\"}",
@@ -1060,7 +1047,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "sum(increase(windows_net_bytes_received_total{instance=\"$server\"}[1h])) by (instance)",
@@ -1082,7 +1069,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "sum(increase(windows_net_bytes_sent_total{instance=\"$server\"}[1h])) by (instance)",
@@ -1199,7 +1186,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1298,7 +1285,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "windows_cs_logical_processors{instance=~\"$server\"}",
@@ -1394,7 +1381,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1492,7 +1479,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -1653,7 +1640,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1677,7 +1664,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "windows_logical_disk_free_bytes{instance=~\"$server\"}",
@@ -1775,7 +1762,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1892,7 +1879,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -2031,7 +2018,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -2071,7 +2058,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -2202,7 +2189,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "aft8t34ns42yoe"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "application": {
@@ -2601,6 +2588,26 @@
     "title": "Windows Exporter",
     "variables": [
       {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "name": "datasource",
+          "label": "Prometheus",
+          "pluginId": "prometheus",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "hide": "dontHide",
+          "skipUrlSync": false,
+          "allowCustomValue": false
+        }
+      },
+      {
         "kind": "IntervalVariable",
         "spec": {
           "name": "interval",
@@ -2642,7 +2649,7 @@
             "group": "prometheus",
             "version": "v0",
             "datasource": {
-              "name": "aft8t34ns42yoe"
+              "name": "${datasource}"
             },
             "spec": {
               "query": "label_values(windows_cpu_time_total, instance)",

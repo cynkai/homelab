@@ -9,6 +9,12 @@ services:
       - ./loki-config.yaml:/etc/loki/loki-config.yaml
       - loki_data:/loki
     restart: unless-stopped
+    networks:
+      - monitoring_default
 
 volumes:
   loki_data:
+
+networks:
+  monitoring_default:
+    external: true

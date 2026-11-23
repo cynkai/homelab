@@ -44,8 +44,10 @@ Start it first so Loki and Alloy can join that network. Grafana reads
 Prometheus at `http://prometheus:9090` and Loki at `http://loki:3100`.
 Alloy sends logs to Loki on the same network.
 
-Open Grafana at <http://localhost:3001>. In Explore, run `up` against
-Prometheus and `{container=~".+"}` against Loki. If Loki returns no logs,
+Open Grafana at <http://localhost:3001> and select **Dashboards → HomeLab → Windows Exporter**.
+Grafana loads the dashboard on startup. Use the **Prometheus** selector to choose a
+datasource if you have more than one. In Explore, run `up` against Prometheus and
+`{container=~".+"}` against Loki. If Loki returns no logs,
 check its readiness at <http://localhost:3100/ready> and inspect Alloy
 with `docker compose -f alloy/compose.yaml logs --tail=30 alloy`.
 
@@ -86,4 +88,4 @@ After reinstalling Windows:
 2. Make sure the Windows Exporter service is running.
 3. Confirm port `9182` is listening.
 4. Confirm Prometheus can reach `http://<windows-host>:9182/metrics`.
-5. Import `grafana/dashboards/windows-exporter-dashboard.json` into Grafana.
+5. Open the **Windows Exporter** dashboard in Grafana and select the exporter in **Server**.
